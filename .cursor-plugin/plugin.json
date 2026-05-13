@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cursor/plugins/main/schemas/plugin.schema.json",
+  "name": "higgsfield",
+  "displayName": "Higgsfield",
+  "description": "Generate images, videos, and more using Higgsfield MCP from Cursor.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Higgsfield",
+    "email": "support@higgsfield.ai"
+  },
+  "publisher": "higgsfield",
+  "homepage": "https://higgsfield.ai",
+  "repository": "https://github.com/higgsfield-ai/cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "higgsfield",
+    "image-generation",
+    "video-generation",
+    "virality",
+    "creative",
+    "mcp"
+  ],
+  "category": "developer-tools",
+  "tags": ["media", "creative", "ai-generation", "video", "image"]
+}

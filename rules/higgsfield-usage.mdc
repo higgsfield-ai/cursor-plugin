@@ -1,0 +1,39 @@
+---
+description: How to use the Higgsfield MCP server reliably — prefer MCP tools over guessing, always poll jobs, upload local media before referencing it.
+alwaysApply: false
+globs:
+---
+
+# Higgsfield MCP usage
+
+When the user wants to generate images or videos, predict virality, or work with Higgsfield in any way, follow these rules.
+
+## Always prefer MCP tools
+
+- Use the `higgsfield` MCP server's tools (`generate_image`, `generate_video`, `virality_predictor`, `media_upload`, `media_confirm`, etc.) instead of calling external APIs, shelling out, or guessing parameters.
+- Don't invent model names, aspect ratios, or other enum values — call `models_explore` first when unsure.
+
+## Workspace context
+
+- If the user has multiple workspaces and hasn't picked one this session, call `list_workspaces` and ask, or `select_workspace` if there's an obvious match.
+- Don't repeatedly ask which workspace — pick once per session and remember.
+
+## Local files always go through media upload
+
+- If the user references a local file path (image or video) as input, run `media_upload` → `media_confirm` first to obtain a Higgsfield media reference, then pass that reference into the downstream tool.
+- Skipping `media_confirm` will produce an unusable handle.
+
+## Jobs are async
+
+- `generate_image`, `generate_video`, and `virality_predictor` return a job. Poll with `job_status` until completion, then render with `job_display`.
+- Don't poll more often than every few seconds. Video jobs can take minutes — tell the user upfront.
+
+## Failures
+
+- When a tool fails, surface the actual error from the MCP response. Don't retry silently or hallucinate a result.
+- For quota / balance errors, check `balance` and link the user to `show_plans_and_credits`.
+
+## Virality predictions
+
+- Only run `virality_predictor` on media that's already in Higgsfield (either freshly generated or uploaded via `media-management`).
+- Frame predictions as forecasts, not guarantees. Always pair the score with concrete recommended edits.
