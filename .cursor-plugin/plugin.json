@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/cursor/plugins/main/schemas/plugin.schema.json",
   "name": "higgsfield",
   "displayName": "Higgsfield",
   "description": "Generate images, videos, and more using Higgsfield MCP from Cursor.",
