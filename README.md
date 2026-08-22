@@ -1,6 +1,6 @@
 # Higgsfield for Cursor
 
-Generate images, videos, and more using Higgsfield MCP from Cursor.
+Generate images, videos, and complete creative workflows using Higgsfield MCP from Cursor.
 
 ## Installation
 
@@ -24,10 +24,10 @@ Reload Cursor: `Cmd-Shift-P → Developer: Reload Window`.
 
 Verify:
 
-- `Cursor Settings → Plugins` lists **Higgsfield**.
-- `Cursor Settings → Tools & MCPs` shows `higgsfield` with a green dot. The first connection prompts authentication.
+- `Customize → Plugins` lists **Higgsfield**.
+- `Customize → MCPs` shows `higgsfield`. The first connection prompts authentication.
 
-> **Note**: use a real directory copy; symlinks may not load.
+The copy-based setup above matches the packaged Marketplace layout. Current Cursor versions also support symlinking the repository for local iteration.
 
 #### Updating
 
