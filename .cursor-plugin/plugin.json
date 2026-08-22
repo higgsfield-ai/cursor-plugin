@@ -2,7 +2,7 @@
   "name": "higgsfield",
   "displayName": "Higgsfield",
   "description": "Generate images, videos, and more using Higgsfield MCP from Cursor.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Higgsfield AI",
     "email": "support@higgsfield.ai"
